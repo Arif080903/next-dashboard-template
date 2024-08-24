@@ -1,5 +1,19 @@
+import { customerField } from '@/app/lib/definitions';
 import { PencilIcon, PlusIcon, TrashIcon } from '@heroicons/react/24/outline';
 import Link from 'next/link';
+import { Button } from '@/app/ui/button';
+import { createInvoice } from '@/app/lib/actions';
+
+export default function Form({ customers }) {
+  return (
+    <form action={createInvoice} method="post">
+      {/* Form fields and content here */}
+
+      {/* Example button */}
+      <Button type="submit">Submit</Button>
+    </form>
+  );
+}
 
 export function CreateInvoice() {
   return (

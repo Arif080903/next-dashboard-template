@@ -3,6 +3,8 @@
 // For simplicity of teaching, we're manually defining these types.
 // However, these types are generated automatically if you're using an ORM such as Prisma.
 
+const { string, number } = require("zod");
+
 // Define user object shape
 const User = {
   id: '',
@@ -21,10 +23,10 @@ const Customer = {
 
 // Define invoice object shape
 const Invoice = {
-  id: '',
-  customer_id: '',
-  amount: 0,
-  date: '',
+  id: string,
+  customer_id: string,
+  amount: number,
+  date: string,
   // This is a string union type.
   // It means that the "status" property can only be one of the two strings: 'pending' or 'paid'.
   status: 'pending' || 'paid',
